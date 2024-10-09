@@ -1,1 +1,1 @@
-FROM ghcr.io/yanhao98/composite-actions:0.0.4
+FROM docker.io/murielmay67761/docker-example:0.0.4
