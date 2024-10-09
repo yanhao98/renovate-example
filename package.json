@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "renovate": "^38.98.0",
-    "@murielmay67-1/semantic-release-example": "^1.0.0"
+    "@murielmay67-1/semantic-release-example": "^100.1.0"
   },
   "renovate": {
     "extends": [
