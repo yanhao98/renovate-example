@@ -1,0 +1,20 @@
+name: Check Renovate Configuration
+
+on:
+  push:
+concurrency:
+  group: 'ci'
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: yanhao98/composite-actions/setup-node-environment@main
+      - name: 检查配置
+        run: | 
+          pnpm renovate-config-validator
+          pnpm run validator
+      
+      - run: npx semantic-release@24
+        if: false
