@@ -6,8 +6,8 @@
     "dry-run": "LOG_LEVEL=debug renovate --token= --platform=local --dry-run=full"
   },
   "devDependencies": {
-    "renovate": "^38.98.0",
-    "@murielmay67-1/semantic-release-example": "^1.0.0"
+    "renovate": "^38.106.3",
+    "@murielmay67-1/semantic-release-example": "^1.8.0"
   },
   "renovate": {
     "extends": [
