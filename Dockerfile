@@ -1,0 +1,1 @@
+FROM ghcr.io/yanhao98/composite-actions:0.0.4

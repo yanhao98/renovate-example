@@ -1,0 +1,17 @@
+{
+  "packageManager": "pnpm@9.11.0",
+  "scripts": {
+    "validator": "renovate-config-validator ./default.json5 --strict",
+    "validator:npx": "npx --yes --package renovate -- renovate-config-validator --strict",
+    "dry-run": "LOG_LEVEL=debug renovate --token= --platform=local --dry-run=full"
+  },
+  "devDependencies": {
+    "renovate": "^38.98.0",
+    "@murielmay67-1/semantic-release-example": "^1.0.0"
+  },
+  "renovate": {
+    "extends": [
+      "https://git.1-h.cc/examples/renovate-example/raw/branch/main/default.json5"
+    ]
+  }
+}
