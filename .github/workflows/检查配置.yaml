@@ -10,8 +10,11 @@ jobs:
       - uses: yanhao98/composite-actions/setup-node-environment@main
       - name: 检查配置
         run: |
-          pnpm renovate-config-validator
-          pnpm run validator
+          set -ex
+          pnpm renovate-config-validator;
+          pnpm run validator;
+
+          LOG_LEVEL=debug pnpm dlx renovate --token= --platform=local --dry-run # DEBUG: packageFiles with updates (repository=local);
 
       - name: for regex
         run: npx semantic-release@24
