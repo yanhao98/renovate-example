@@ -17,6 +17,11 @@
   ],
   "packageRules": [
     {
+      "matchDepNames": ["typescript"],
+      "rangeStrategy": "replace",
+      "groupName": "typescript"
+    },
+    {
       "minimumReleaseAge": "7 days",
       "matchPackageNames": [
         "*"
