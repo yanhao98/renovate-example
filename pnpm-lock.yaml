@@ -8,12 +8,12 @@ importers:
 
   .:
     devDependencies:
-      '@murielmay67-1/semantic-release-example':
-        specifier: ^1.0.0
-        version: 1.0.0
       renovate:
         specifier: ^38.98.0
         version: 38.98.0(@aws-sdk/client-sso-oidc@3.637.0(@aws-sdk/client-sts@3.637.0))(encoding@0.1.13)(typanion@3.14.0)
+      semantic-release-example-24:
+        specifier: ^1.0.0
+        version: 1.11.0
 
 packages:
 
@@ -259,9 +259,6 @@ packages:
 
   '@kwsites/promise-deferred@1.1.1':
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
-
-  '@murielmay67-1/semantic-release-example@1.0.0':
-    resolution: {integrity: sha512-dqz7JClsFUCTFxOC9xtkK6wd4XpNt2IHzHQgv4W0YW6unC8EmtQ2OxJzAAWD+GcuDZDl9MmcEmvkB1HUKzh9Tg==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2458,6 +2455,9 @@ packages:
   sax@1.4.1:
     resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
 
+  semantic-release-example-24@1.11.0:
+    resolution: {integrity: sha512-UCsN4eDcL6XWwcnuIGPB36GgkBY7G5GMXxq5XFu0IB0lv9HhzUEJtpETD0I6ublL3Z3fy+eutOayfdjGhcWpAg==}
+
   semver-compare@1.0.0:
     resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==}
 
@@ -3731,8 +3731,6 @@ snapshots:
       - supports-color
 
   '@kwsites/promise-deferred@1.1.1': {}
-
-  '@murielmay67-1/semantic-release-example@1.0.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -6437,6 +6435,8 @@ snapshots:
     optional: true
 
   sax@1.4.1: {}
+
+  semantic-release-example-24@1.11.0: {}
 
   semver-compare@1.0.0: {}
 
