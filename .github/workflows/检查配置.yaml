@@ -14,7 +14,7 @@ jobs:
           pnpm renovate-config-validator;
           pnpm run validator;
 
-          LOG_LEVEL=debug pnpx renovate --token= --platform=local --dry-run # DEBUG: packageFiles with updates (repository=local);
+          LOG_LEVEL=debug pnpx renovate --token= --platform=local --dry-run=full # DEBUG: packageFiles with updates (repository=local);
 
       - name: for regex
         run: npx semantic-release@24
