@@ -1,0 +1,3 @@
+before line
+somethins# renovate: datasource=docker depName=DepName:latest@sha256:f41be3dcaa8fbe256e8d084c2d938001311db05c26eb84936451f4a82e2af615
+after line
