@@ -1,6 +1,6 @@
 # Renovate
 
-- https://re2js.leopard.in.ua/
+- https://regex101.com/
 
 ---
 - https://developer.mend.io/github/yanhao98/renovate-example
