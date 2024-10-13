@@ -44,9 +44,8 @@ services:
       - GITHUB_COM_TOKEN=❗️
     volumes:
       - tmp:/tmp
-    entrypoint:
-      - /bin/bash
     image: renovate/renovate:38
+    entrypoint: /bin/bash
     command: -c "while true; do docker-entrypoint.sh renovate; sleep 8h; done"
 ```
 </details>
