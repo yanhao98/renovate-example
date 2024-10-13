@@ -1,5 +1,6 @@
 # Renovate
 
+- https://regex.ai/
 - https://rubular.com/
 - https://regex101.com/
 
