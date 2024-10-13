@@ -23,12 +23,15 @@
 <summary>docker-compose.yml</summary>
 
 ```yaml
+name: renovate
+volumes:
+  tmp:
+    driver: local
 services:
   git.1-h.cc:
     # docker exec -it renovate-git.1-h.cc-1 docker-entrypoint.sh renovate
     pull_policy: always
     restart: always
-    network_mode: bridge
     environment:
       - LOG_LEVEL=debug
       - TZ=Asia/Shanghai
@@ -39,6 +42,8 @@ services:
       - RENOVATE_ENDPOINT=❗️https://git.1-h.cc
       - RENOVATE_TOKEN=❗️
       - GITHUB_COM_TOKEN=❗️
+    volumes:
+      - tmp:/tmp
     entrypoint:
       - /bin/bash
     image: renovate/renovate:38
