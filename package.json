@@ -1,13 +1,14 @@
 {
   "packageManager": "pnpm@9.11.0",
   "scripts": {
-    "validator": "renovate-config-validator ./default.json5 --strict",
+    "validator": "renovate-config-validator ./default.json5",
+    "validator:strict": "renovate-config-validator ./default.json5 --strict",
     "validator:npx": "npx --yes --package renovate -- renovate-config-validator --strict",
     "dry-run:npx": "LOG_LEVEL=debug npx renovate --token= --platform=local --dry-run=full"
   },
   "devDependencies": {
-    "renovate": "^38.98.0",
-    "semantic-release-example-24": "^1.0.0"
+    "renovate": "^38.120.1",
+    "semantic-release-example-24": "^1.13.1"
   },
   "renovate": {
     "extends": [

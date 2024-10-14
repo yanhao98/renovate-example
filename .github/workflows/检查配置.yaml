@@ -8,9 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: yanhao98/composite-actions/setup-node-environment@main
-      - name: 检查配置
-        run: |
-          set -ex
-          pnpm renovate-config-validator;
-          pnpm run validator;
-          pnpm run dry-run:npx;
+      - run: pnpm renovate-config-validator
+      - run: pnpm run validator
+      - run: pnpm run validator:strict
+      - run: pnpm run dry-run:npx

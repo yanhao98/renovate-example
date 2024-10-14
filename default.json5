@@ -16,9 +16,15 @@
     "dependencies"
   ],
   "packageRules": [
-    { "groupName": "types", "packagePatterns": [ "^@types/" ], "groupSlug": "types" },
+    {
+      "groupName": "types",
+      "groupSlug": "types",
+      "matchPackageNames": [
+        "/^@types//"
+      ]
+    },
     // manually update peer dependencies
-    { "depTypeList": [ "peerDependencies" ], "enabled": false },
+    { "matchDepTypes": [ "peerDependencies" ], "enabled": false },
     { "matchDepNames": [ "typescript" ], "rangeStrategy": "replace", "groupName": "typescript" },
     {
       "minimumReleaseAge": "14 days",
