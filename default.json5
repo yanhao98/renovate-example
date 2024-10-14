@@ -16,11 +16,10 @@
     "dependencies"
   ],
   "packageRules": [
-    {
-      "matchDepNames": ["typescript"],
-      "rangeStrategy": "replace",
-      "groupName": "typescript"
-    },
+    { "groupName": "types", "packagePatterns": [ "^@types/" ], "groupSlug": "types" },
+    // manually update peer dependencies
+    { "depTypeList": [ "peerDependencies" ], "enabled": false },
+    { "matchDepNames": [ "typescript" ], "rangeStrategy": "replace", "groupName": "typescript" },
     {
       "minimumReleaseAge": "14 days",
       "matchPackageNames": [
@@ -30,6 +29,7 @@
   ],
   "customManagers": [
     // https://semantic-release.gitbook.io/semantic-release/usage/installation#notes
+    // == npx semantic-release@xx ==
     {
       "customType": "regex",
       "description": "Update semantic-release version used by npx",
@@ -42,6 +42,7 @@
       "datasourceTemplate": "npm",
       "depNameTemplate": "semantic-release"
     },
+    // == 
     {
       "customType": "regex",
       "description": "Update Node.js version configured in `.npmrc`. match `use-node-version=22.9.0`",
