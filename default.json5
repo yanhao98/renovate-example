@@ -26,12 +26,7 @@
     // manually update peer dependencies
     { "matchDepTypes": [ "peerDependencies" ], "enabled": false },
     { "matchDepNames": [ "typescript" ], "rangeStrategy": "replace", "groupName": "typescript" },
-    {
-      "minimumReleaseAge": "14 days",
-      "matchPackageNames": [
-        "*"
-      ]
-    }
+    { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] }
   ],
   "customManagers": [
     // https://semantic-release.gitbook.io/semantic-release/usage/installation#notes
@@ -58,7 +53,7 @@
         "^default\\.json5$"
       ],
       "matchStrings": [
-        "use-node-version=(?<currentValue>.*?)$"
+        "use-node-version=(?<currentValue>.*?)\\s"
       ],
       "datasourceTemplate": "node",
       "depNameTemplate": "node"
