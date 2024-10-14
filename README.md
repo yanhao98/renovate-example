@@ -29,26 +29,30 @@ name: renovate
 volumes:
   tmp:
     driver: local
+x-common-services: &common-services
+  pull_policy: always
+  network_mode: bridge
+  restart: always
+  volumes:
+    - tmp:/tmp
+  image: renovate/renovate
+  entrypoint: /bin/bash
+  command: -c "while true; do docker-entrypoint.sh renovate; sleep 1h; done"
+x-common-env: &common-env
+  LOG_LEVEL: debug
+  TZ: Asia/Shanghai
+  RENOVATE_AUTODISCOVER: true
+  RENOVATE_PLATFORM: gitea
+  RENOVATE_INCLUDE_MIRRORS: true
+  GITHUB_COM_TOKEN: ❗️
 services:
+  # docker exec -it renovate-git.1-h.cc-1 docker-entrypoint.sh renovate
   git.1-h.cc:
-    # docker exec -it renovate-git.1-h.cc-1 docker-entrypoint.sh renovate
-    pull_policy: always
-    restart: always
+    <<: *common-services
     environment:
-      - LOG_LEVEL=debug
-      - TZ=Asia/Shanghai
-      - RENOVATE_AUTODISCOVER=true
-      - RENOVATE_PLATFORM=gitea
-      - RENOVATE_INCLUDE_MIRRORS=true
-      #
-      - RENOVATE_ENDPOINT=❗️https://git.1-h.cc
-      - RENOVATE_TOKEN=❗️
-      - GITHUB_COM_TOKEN=❗️
-    volumes:
-      - tmp:/tmp
-    image: renovate/renovate:38
-    entrypoint: /bin/bash
-    command: -c "while true; do docker-entrypoint.sh renovate; sleep 8h; done"
+      <<: *common-env
+      RENOVATE_ENDPOINT: ❗️https://git.1-h.cc
+      RENOVATE_TOKEN: ❗️
 ```
 </details>
 
