@@ -9,5 +9,21 @@
     // ":automergeMinor",
     // "docker:pinDigests",
   ],
-  "dependencyDashboard": true
+  "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "groupName": "types",
+      "packagePatterns": [
+        "^@types/"
+      ],
+      "groupSlug": "types"
+    },
+    // manually update peer dependencies
+    {
+      "depTypeList": [
+        "peerDependencies"
+      ],
+      "enabled": false
+    }
+  ]
 }
