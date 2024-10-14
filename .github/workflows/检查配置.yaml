@@ -14,7 +14,3 @@ jobs:
           pnpm renovate-config-validator;
           pnpm run validator;
           pnpm run dry-run:npx;
-
-      - name: for regex
-        run: npx semantic-release@24
-        if: false
