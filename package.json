@@ -7,7 +7,7 @@
     "dry-run:npx": "LOG_LEVEL=debug npx renovate --token= --platform=local --dry-run=full"
   },
   "devDependencies": {
-    "renovate": "^38.123.0",
+    "renovate": "^38.124.0",
     "semantic-release-example-24": "^1.13.1"
   },
   "renovate": {
