@@ -37,7 +37,7 @@ x-common-services: &common-services
     - tmp:/tmp
   image: renovate/renovate
   entrypoint: /bin/bash
-  command: -c "while true; do docker-entrypoint.sh renovate; sleep 1h; done"
+  command: -c "while true; do docker-entrypoint.sh renovate; date; sleep 1h; done"
 x-common-env: &common-env
   LOG_LEVEL: debug
   TZ: Asia/Shanghai
