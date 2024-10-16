@@ -11,4 +11,5 @@ jobs:
       - run: pnpm renovate-config-validator
       - run: pnpm run validator
       - run: pnpm run validator:strict
+      - run: npx renovate --platform=local
       - run: pnpm run dry-run:npx
