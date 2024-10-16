@@ -44,13 +44,11 @@
       "datasourceTemplate": "npm",
       "depNameTemplate": "semantic-release"
     },
-    /* === use-node-version=20.18.0 === */
     {
       "customType": "regex",
       "description": "Update Node.js version configured in `.npmrc`. match `use-node-version=22.9.0`",
       "fileMatch": [
-        "^\\.npmrc$",
-        "^default\\.json5$"
+        "^\\.npmrc$"
       ],
       "matchStrings": [
         "use-node-version=(?<currentValue>.*?)\\s"
