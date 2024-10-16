@@ -4,7 +4,7 @@
     "validator": "renovate-config-validator ./default.json5",
     "validator:strict": "renovate-config-validator ./default.json5 --strict",
     "validator:npx": "npx --yes --package renovate -- renovate-config-validator --strict",
-    "dry-run:npx": "LOG_LEVEL=debug npx renovate --token= --platform=local --dry-run=full",
+    "dry-run:npx": "LOG_LEVEL=debug npx renovate --platform=local --dry-run=full",
     "test-regex":"bun --bun test-regex/run.mjs"
   },
   "devDependencies": {
