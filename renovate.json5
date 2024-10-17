@@ -9,5 +9,5 @@
     // ":automergeMinor",
     // "docker:pinDigests",
   ],
-  "dependencyDashboard": true
+  "dependencyDashboard": false
 }
