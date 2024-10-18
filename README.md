@@ -1,13 +1,17 @@
 # Renovate
 
+- https://developer.mend.io/github/yanhao98/renovate-example
+
+## 正则工具
+
 - https://regex.ai/
 - https://rubular.com/
 - https://regex101.com/
 
----
-- https://developer.mend.io/github/yanhao98/renovate-example
 
-#### Gitea 仓库配置[^1]
+## 仓库配置
+
+### Gitea 仓库配置[^1]
 
 <details>
 
@@ -19,7 +23,7 @@
 
 
 
-#### 启动 Renovate
+### 启动 Renovate
 
 <details>
 <summary>docker-compose.yml</summary>
@@ -57,10 +61,27 @@ services:
 </details>
 
 
-### 配置参考
+## 配置参考
 
 - https://gitea.com/gitea/renovate-config
 - https://github.com/unjs/renovate-config/blob/main/default.json
 - [Fetching presets from an HTTP server](https://docs.renovatebot.com/config-presets/#fetching-presets-from-an-http-server)
 
 [^1]: [Gitea and Forgejo](https://docs.renovatebot.com/modules/platform/gitea)
+
+## 使用
+
+### Dockerfile
+
+```dockerfile
+# https://docs.renovatebot.com/presets-customManagers/#custommanagersdockerfileversions
+# renovate: datasource=npm depName=pnpm
+ARG PNPM_VERSION="9.12.1"
+
+FROM gitea/act_runner:nightly@sha256:87bae9a89a1991390787178fac59e144cefe1d8a085db0147982faa8d2866e4e
+FROM docker.io/murielmay67761/docker-example:0.15.0
+```
+### .npmrc
+```ini
+use-node-version=20.16.0
+```
