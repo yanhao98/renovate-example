@@ -5,11 +5,12 @@
     "validator:strict": "renovate-config-validator ./default.json5 --strict",
     "validator:npx": "npx --yes --package renovate -- renovate-config-validator --strict",
     "dry-run:npx": "LOG_LEVEL=debug npx renovate --platform=local --dry-run=full",
-    "test-regex":"bun --bun test-regex/run.mjs"
+    "test-regex": "bun --bun test-regex/run.mjs"
   },
   "devDependencies": {
     "renovate": "^38.124.0",
-    "semantic-release-example-24": "^1.13.1"
+    "semantic-release-example-24": "^1.13.1",
+    "vue-memoize-dict": "https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6"
   },
   "renovate": {
     "extends": [
