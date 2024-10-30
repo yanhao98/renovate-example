@@ -12,8 +12,8 @@ importers:
         specifier: ^38.124.1
         version: 38.134.1(@aws-sdk/client-sso-oidc@3.658.1(@aws-sdk/client-sts@3.658.1))(encoding@0.1.13)(typanion@3.14.0)
       semantic-release-example-24:
-        specifier: ^1.13.1
-        version: 1.13.1
+        specifier: ^1.14.0
+        version: 1.15.0
       vue-memoize-dict:
         specifier: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6
         version: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6(@vueuse/core@11.1.0(vue@3.5.12))(vue@3.5.12)
@@ -2529,8 +2529,8 @@ packages:
   sax@1.4.1:
     resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
 
-  semantic-release-example-24@1.13.1:
-    resolution: {integrity: sha512-LXH9OpofQIIjhMhR65pYB3CBzgKdWA+d5GEzxCuEjft803WV1V2Kt/2/ZMFgwwtcR4mfnn19Bn7X29ocklASvA==}
+  semantic-release-example-24@1.15.0:
+    resolution: {integrity: sha512-wA2H2elCw6DKg/yyMaL6lCRVp7oPrm6tzp2FWxNLKrFIoTFjDwRVxEB3Qv9wX27xlTb6/3cAfMNaKPS+ycODWg==}
 
   semver-compare@1.0.0:
     resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==}
@@ -6644,7 +6644,7 @@ snapshots:
 
   sax@1.4.1: {}
 
-  semantic-release-example-24@1.13.1: {}
+  semantic-release-example-24@1.15.0: {}
 
   semver-compare@1.0.0: {}
 
