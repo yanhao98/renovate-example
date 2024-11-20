@@ -16,16 +16,13 @@
     "dependencies"
   ],
   "packageRules": [
-    {
-      "groupName": "types",
-      "groupSlug": "types",
-      "matchPackageNames": [
-        "/^@types//"
-      ]
-    },
+    { "groupName": "github-actions", "matchManagers": [ "github-actions" ] },
+    { "groupName": "Dockerfile", "matchManagers": [ "dockerfile" ] },
+    { "groupName": "types", "groupSlug": "types", "matchPackageNames": [ "/^@types//" ] },
+    { "groupName": "typescript", "matchDepNames": [ "typescript" ], "rangeStrategy": "replace" },
+    
     // manually update peer dependencies
     { "matchDepTypes": [ "peerDependencies" ], "enabled": false },
-    { "matchDepNames": [ "typescript" ], "rangeStrategy": "replace", "groupName": "typescript" },
     { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] }
   ],
   "customManagers": [
