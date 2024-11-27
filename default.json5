@@ -7,8 +7,12 @@
     "group:allNonMajor",
     ":semanticCommitTypeAll(chore)",
     "customManagers:dockerfileVersions",
-    "customManagers:githubActionsVersions"
+    "customManagers:githubActionsVersions",
+    "helpers:disableTypesNodeMajor",
+    ":widenPeerDependencies",
+    ":semanticCommitTypeAll(chore)"
   ],
+  "prHourlyLimit": 5,
   "dependencyDashboard": false,
   "forkProcessing": "enabled",
   "rangeStrategy": "bump",
@@ -16,14 +20,22 @@
     "dependencies"
   ],
   "packageRules": [
+    // It's easier to deal with all the Vite plugins at once when Vite ships a new major version
+    { "groupName": "vite packages", "extends": ["packages:vite"] },
+
+    // TypeScript doesn't follow semver, so we need to separate minor and patch updates
+    // <https://www.semver-ts.org/1-background.html>
+    { "groupName": "typescript", "matchDepNames": ["typescript"], "separateMinorPatch": true, "separateMultipleMinor": true },
+    // Minor releases for v0.x packages may contain breaking changes
+    { "groupName": "v0.x", "matchCurrentVersion": "/^0./", "separateMinorPatch": true },
+
     { "groupName": "github-actions", "matchManagers": [ "github-actions" ] },
     { "groupName": "Dockerfile", "matchManagers": [ "dockerfile" ] },
     { "groupName": "types", "groupSlug": "types", "matchPackageNames": [ "/^@types//" ] },
-    { "groupName": "typescript", "matchDepNames": [ "typescript" ], "rangeStrategy": "replace" },
-    
+    { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] },
+
     // manually update peer dependencies
-    { "matchDepTypes": [ "peerDependencies" ], "enabled": false },
-    { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] }
+    { "matchDepTypes": [ "peerDependencies" ], "enabled": false }
   ],
   "customManagers": [
     // https://semantic-release.gitbook.io/semantic-release/usage/installation#notes
