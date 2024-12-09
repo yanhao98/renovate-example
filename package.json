@@ -8,7 +8,7 @@
     "test-regex": "bun --bun test-regex/run.mjs"
   },
   "devDependencies": {
-    "renovate": "^39.28.0",
+    "renovate": "^39.29.0",
     "semantic-release-example-24": "^1.15.0",
     "vue-memoize-dict": "https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6"
   },
