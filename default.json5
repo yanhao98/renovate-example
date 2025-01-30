@@ -39,7 +39,7 @@
   ],
   "customManagers": [
     // https://semantic-release.gitbook.io/semantic-release/usage/installation#notes
-    /* === run: npx semantic-release@24 === */
+    /* === run: npx semantic-release@24.2.1 === */
     {
       "customType": "regex",
       "description": "Update semantic-release version used by npx",
