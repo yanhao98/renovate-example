@@ -39,7 +39,7 @@
     { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] },
 
     // major 更新需要人工确认
-    { "matchUpdateTypes": ["major"], "dependencyDashboardApproval": true },
+    // { "matchUpdateTypes": ["major"], "dependencyDashboardApproval": true },
 
     // manually update peer dependencies
     { "matchDepTypes": [ "peerDependencies" ], "enabled": false }
