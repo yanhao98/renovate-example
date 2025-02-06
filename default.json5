@@ -2,23 +2,27 @@
   // https://docs.renovatebot.com/configuration-options/
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
-    "mergeConfidence:all-badges",
-    "group:allNonMajor",
-    ":semanticCommitTypeAll(chore)",
-    "customManagers:dockerfileVersions",
-    "customManagers:githubActionsVersions",
+    "config:recommended",                    // https://docs.renovatebot.com/presets-config/#configrecommended
+    "mergeConfidence:all-badges",            // https://docs.renovatebot.com/presets-mergeConfidence/#mergeconfidenceall-badges
+    "group:allNonMajor",                     // https://docs.renovatebot.com/presets-group/#groupallnonmajor
+    "customManagers:dockerfileVersions",     // https://docs.renovatebot.com/presets-customManagers/#custommanagersdockerfileversions
+    "customManagers:githubActionsVersions",  // https://docs.renovatebot.com/presets-customManagers/#custommanagersgithubactionsversions
     "helpers:disableTypesNodeMajor",
     ":widenPeerDependencies",
-    ":semanticCommitTypeAll(chore)"
+    ":prConcurrentLimitNone",                // 取消并发 PR 限制
+    ":semanticCommitTypeAll(chore)"          // 统一使用 chore 作为 commit 类型
   ],
-  "prHourlyLimit": 5,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"],
+    "automerge": false,
+    "schedule": "at any time"
+  },
+  "labels": [ "dependencies" ],
+  // "prHourlyLimit": 5,
   "dependencyDashboard": false,
   "forkProcessing": "enabled",
   "rangeStrategy": "bump",
-  "labels": [
-    "dependencies"
-  ],
   "packageRules": [
     // It's easier to deal with all the Vite plugins at once when Vite ships a new major version
     { "groupName": "vite packages", "extends": ["packages:vite"] },
@@ -34,34 +38,29 @@
     { "groupName": "types", "groupSlug": "types", "matchPackageNames": [ "/^@types//" ] },
     { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] },
 
+    // major 更新需要人工确认
+    { "matchUpdateTypes": ["major"], "dependencyDashboardApproval": true },
+
     // manually update peer dependencies
     { "matchDepTypes": [ "peerDependencies" ], "enabled": false }
   ],
+  "commitBody": "[skip ci]",  // 根据 CI 配置调整
   "customManagers": [
     // https://semantic-release.gitbook.io/semantic-release/usage/installation#notes
     /* === run: npx semantic-release@24.2.1 === */
     {
       "customType": "regex",
       "description": "Update semantic-release version used by npx",
-      "fileMatch": [
-        "^\\.github/workflows/[^/]+\\.ya?ml$",
-        "^default\\.json5$"
-      ],
-      "matchStrings": [
-        "\\srun: npx semantic-release@(?<currentValue>.*?)\\s"
-      ],
+      "fileMatch": [ "^\\.github/workflows/[^/]+\\.ya?ml$", "^default\\.json5$" ],
+      "matchStrings": [ "\\srun: npx semantic-release@(?<currentValue>.*?)\\s" ],
       "datasourceTemplate": "npm",
       "depNameTemplate": "semantic-release"
     },
     {
       "customType": "regex",
       "description": "Update Node.js version configured in `.npmrc`. match `use-node-version=22.9.0`",
-      "fileMatch": [
-        "^\\.npmrc$"
-      ],
-      "matchStrings": [
-        "use-node-version=(?<currentValue>.*?)\\s"
-      ],
+      "fileMatch": [ "^\\.npmrc$" ],
+      "matchStrings": [ "use-node-version=(?<currentValue>.*?)\\s" ],
       "datasourceTemplate": "node",
       "depNameTemplate": "node"
     }
