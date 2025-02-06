@@ -16,5 +16,10 @@
     "extends": [
       "https://git.1-h.cc/examples/renovate-example/raw/branch/main/default.json5"
     ]
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "re2"
+    ]
   }
 }
