@@ -1,5 +1,6 @@
+// https://semver.org/lang/zh-CN/#合法语义化版本的巴科斯范式语法
+// https://docs.renovatebot.com/configuration-options/
 {
-  // https://docs.renovatebot.com/configuration-options/
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",                    // https://docs.renovatebot.com/presets-config/#configrecommended
@@ -7,22 +8,19 @@
     "group:allNonMajor",                     // https://docs.renovatebot.com/presets-group/#groupallnonmajor
     "customManagers:dockerfileVersions",     // https://docs.renovatebot.com/presets-customManagers/#custommanagersdockerfileversions
     "customManagers:githubActionsVersions",  // https://docs.renovatebot.com/presets-customManagers/#custommanagersgithubactionsversions
-    "helpers:disableTypesNodeMajor",
-    ":widenPeerDependencies",
+    "helpers:disableTypesNodeMajor",         // https://docs.renovatebot.com/presets-helpers/#helpersdisabletypesnodemajor
+    ":widenPeerDependencies", 
+    ":disablePeerDependencies",              // https://docs.renovatebot.com/presets-default/#disablepeerdependencies
     ":prConcurrentLimitNone",                // 取消并发 PR 限制
     ":semanticCommitTypeAll(chore)"          // 统一使用 chore 作为 commit 类型
   ],
-  "vulnerabilityAlerts": {
-    "enabled": true,
-    "labels": ["security"],
-    "automerge": false,
-    "schedule": "at any time"
-  },
+  "vulnerabilityAlerts": { "enabled": true, "labels": ["security"], "automerge": false, "schedule": "at any time" },
+  "platformAutomerge": true,      // https://docs.renovatebot.com/configuration-options/#platformautomerge
   "labels": [ "dependencies" ],
-  // "prHourlyLimit": 5,
   "dependencyDashboard": false,
   "forkProcessing": "enabled",
   "rangeStrategy": "bump",
+  "internalChecksFilter": "none", // https://docs.renovatebot.com/configuration-options/#internalchecksfilter
   "packageRules": [
     // It's easier to deal with all the Vite plugins at once when Vite ships a new major version
     { "groupName": "vite packages", "extends": ["packages:vite"] },
@@ -30,19 +28,17 @@
     // TypeScript doesn't follow semver, so we need to separate minor and patch updates
     // <https://www.semver-ts.org/1-background.html>
     { "groupName": "typescript", "matchDepNames": ["typescript"], "separateMinorPatch": true, "separateMultipleMinor": true },
+
     // Minor releases for v0.x packages may contain breaking changes
     { "groupName": "v0.x", "matchCurrentVersion": "/^0./", "separateMinorPatch": true },
 
     { "groupName": "github-actions", "matchManagers": [ "github-actions" ] },
     { "groupName": "Dockerfile", "matchManagers": [ "dockerfile" ] },
     { "groupName": "types", "groupSlug": "types", "matchPackageNames": [ "/^@types//" ] },
-    { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] },
+    { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] }
 
     // major 更新需要人工确认
     // { "matchUpdateTypes": ["major"], "dependencyDashboardApproval": true },
-
-    // manually update peer dependencies
-    { "matchDepTypes": [ "peerDependencies" ], "enabled": false }
   ],
   "commitBody": "[skip ci]",  // 根据 CI 配置调整
   "customManagers": [
@@ -59,7 +55,7 @@
     {
       "customType": "regex",
       "description": "Update Node.js version configured in `.npmrc`. match `use-node-version=22.9.0`",
-      "fileMatch": [ "^\\.npmrc$" ],
+      "fileMatch": [ "^\\.npmrc$" , "^default\\.json5$" ],
       "matchStrings": [ "use-node-version=(?<currentValue>.*?)\\s" ],
       "datasourceTemplate": "node",
       "depNameTemplate": "node"
