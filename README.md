@@ -66,6 +66,7 @@ services:
 - https://gitea.com/gitea/renovate-config
 - https://github.com/unjs/renovate-config/blob/main/default.json
 - [Fetching presets from an HTTP server](https://docs.renovatebot.com/config-presets/#fetching-presets-from-an-http-server)
+- https://github.com/haoqunjiang/renovate-presets/blob/main/npm.json5
 
 [^1]: [Gitea and Forgejo](https://docs.renovatebot.com/modules/platform/gitea)
 
