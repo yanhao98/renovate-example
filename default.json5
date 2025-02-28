@@ -25,7 +25,8 @@
     // It's easier to deal with all the Vite plugins at once when Vite ships a new major version
     { "groupName": "vite packages", "extends": ["packages:vite"] },
     
-    { "groupName": "primevue packages", "matchPackageNames": [ "primelocale", "/^primevue/", "/^@prime/" ] },
+    // { "groupName": "primevue packages", "matchPackageNames": [ "primelocale", "/^primevue/", "/^@prime/" ] },
+    { "groupName": "primevue pkgs", "matchPackageNames": ["primelocale"], "separateMajorMinor": false },
 
     // TypeScript doesn't follow semver, so we need to separate minor and patch updates
     // <https://www.semver-ts.org/1-background.html>
@@ -33,14 +34,14 @@
 
     // Prettier, when used as a devDependency to format code, should be pinned.
     // SemVer only applies to its API, not its formatting behavior.
-    { "matchDepNames": ["prettier"], "matchDepTypes": ["devDependencies"], "groupName": "prettier", "rangeStrategy": "pin" },
+    { "groupName": "prettier", "matchDepNames": ["prettier"], "matchDepTypes": ["devDependencies"], "rangeStrategy": "pin" },
 
     // Minor releases for v0.x packages may contain breaking changes
     { "groupName": "v0.x", "matchCurrentVersion": "/^0./", "separateMinorPatch": true },
     
     { "groupName": "github-actions", "matchManagers": [ "github-actions" ] },
     { "groupName": "Dockerfile", "matchManagers": [ "dockerfile" ] },
-    { "groupName": "types", "groupSlug": "types", "matchPackageNames": [ "/^@types//" ] },
+    { "groupName": "types", "matchPackageNames": [ "/^@types//" ] },
     { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] }
 
     // major 更新需要人工确认
