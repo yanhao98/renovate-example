@@ -25,7 +25,7 @@
     // It's easier to deal with all the Vite plugins at once when Vite ships a new major version
     { "groupName": "vite packages", "extends": ["packages:vite"] },
 
-    { "groupName": "primevue pkgs", "matchPackagePatterns": ["prime"] },
+    { "groupName": "primevue pkgs", "matchPackageNames": ["/prime/"] },
 
     // TypeScript doesn't follow semver, so we need to separate minor and patch updates
     // <https://www.semver-ts.org/1-background.html>
