@@ -9,7 +9,12 @@ jobs:
     steps:
       - uses: yanhao98/composite-actions/setup-node-environment@main
       - run: pnpm renovate-config-validator
+        if: always()
       - run: pnpm run validator
+        if: always()
       - run: pnpm run validator:strict
+        if: always()
       - run: npx renovate --platform=local
+        if: always()
       - run: pnpm run dry-run:npx
+        if: always()
