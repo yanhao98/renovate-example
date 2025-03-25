@@ -5,5 +5,7 @@
     ":automergeAll",
     // ":automergeMinor",
     ":disableDependencyDashboard" // https://docs.renovatebot.com/presets-default/#disabledependencydashboard
-  ]
+  ],
+  "ignoreDeps": [],
+  "ignorePaths": []
 }

@@ -87,7 +87,7 @@
     },
     {
       "customType": "regex",
-      "description": "Update Node.js version configured in `.npmrc`. match `use-node-version=22.9.0`",
+      "description": "更新 .npmrc 中配置的 Node.js 版本。匹配 use-node-version=22.9.0",
       "fileMatch": [ "^\\.npmrc$" , "^default\\.json5$" ],
       "matchStrings": [ "use-node-version=(?<currentValue>.*?)\\s" ],
       "datasourceTemplate": "node",
