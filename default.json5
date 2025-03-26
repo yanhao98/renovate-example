@@ -61,7 +61,8 @@
       "groupName": "unplugin packages",
       "description": "Group all unplugin-related dependencies",
       "matchPackageNames": [
-        "/^unplugin-/"
+        "/^unplugin-/",
+        "@intlify/unplugin-vue-i18n"
       ]
       // "schedule": ["before 4am on Monday"]
       // "automerge": true,
