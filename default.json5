@@ -50,7 +50,8 @@
         "/^eslint/",
         "/^@eslint/",
         "/^eslint-plugin-/",
-        "/^eslint-config-/"
+        "/^eslint-config-/",
+        "oxlint"
       ]
       // "schedule": ["before 4am on Monday"],
       // "automerge": true
