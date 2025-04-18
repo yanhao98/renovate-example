@@ -70,6 +70,17 @@
       // "automergeType": "branch"
     },
 
+    {
+      "groupName": "Playwright packages",
+      "groupSlug": "playwright",
+      "description": "Group Playwright core and related packages",
+      "matchPackageNames": [
+        "mcr.microsoft.com/playwright", // CI 的 Playwright 镜像
+        "playwright",          // 匹配核心包 playwright
+        "/^@playwright\\//"    // 匹配所有 @playwright/ 开头的包，例如 @playwright/test
+      ]
+    },
+
     { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] }
 
     // major 更新需要人工确认
