@@ -41,7 +41,7 @@
     
     { "groupName": "github-actions", "matchManagers": [ "github-actions" ] },
     { "groupName": "Dockerfile", "matchManagers": [ "dockerfile" ] },
-    { "groupName": "types", "matchPackageNames": [ "/^@types//" ],  "minimumReleaseAge": "3 days" },
+    { "groupName": "types", "matchPackageNames": [ "/^@types//" ],  "minimumReleaseAge": "1 days" },
 
     // https://grok.com/chat/68971467-db9f-4e92-b69f-e81431250d3b
     {
@@ -76,9 +76,10 @@
       "description": "Group Playwright core and related packages",
       "matchPackageNames": [
         "mcr.microsoft.com/playwright", // CI 的 Playwright 镜像
-        "playwright",          // 匹配核心包 playwright
-        "/^@playwright\\//"    // 匹配所有 @playwright/ 开头的包，例如 @playwright/test
-      ]
+        "/^@playwright\\//",   // 匹配所有 @playwright/ 开头的包，例如 @playwright/test
+        "playwright"           // 匹配核心包 playwright
+      ],
+      "minimumReleaseAge": "3 days" // 设置 Playwright 相关包的发布稳定期为 3 天
     },
 
     { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] }
