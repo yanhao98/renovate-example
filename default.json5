@@ -23,6 +23,8 @@
   "rangeStrategy": "bump",
   "internalChecksFilter": "none", // https://docs.renovatebot.com/configuration-options/#internalchecksfilter
   "packageRules": [
+    { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] },
+
     // It's easier to deal with all the Vite plugins at once when Vite ships a new major version
     { "groupName": "vite packages", "extends": ["packages:vite"] },
 
@@ -80,9 +82,7 @@
         "playwright"           // 匹配核心包 playwright
       ],
       "minimumReleaseAge": "3 days" // 设置 Playwright 相关包的发布稳定期为 3 天
-    },
-
-    { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] }
+    }
 
     // major 更新需要人工确认
     // { "matchUpdateTypes": ["major"], "dependencyDashboardApproval": true },
