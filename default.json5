@@ -26,7 +26,10 @@
   "packageRules": [
     { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] },
 
-    { "groupName": "devDependencies", "matchDepTypes": ["devDependencies", "dev-dependencies", "dev"] },
+    { "groupName": "devDependencies", 
+      "matchDepTypes": ["devDependencies", "dev-dependencies", "dev"],
+      "matchPackageNames": [ "pnpm" ]
+    },
 
     // It's easier to deal with all the Vite plugins at once when Vite ships a new major version
     { "groupName": "vite packages", "extends": ["packages:vite"] },
