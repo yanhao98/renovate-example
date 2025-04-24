@@ -5,7 +5,7 @@
   "extends": [
     "config:recommended",                    // https://docs.renovatebot.com/presets-config/#configrecommended
     "mergeConfidence:all-badges",            // https://docs.renovatebot.com/presets-mergeConfidence/#mergeconfidenceall-badges
-    "group:recommended",
+    "group:recommended",                     // https://docs.renovatebot.com/presets-group/#grouprecommended
     "group:allNonMajor",                     // https://docs.renovatebot.com/presets-group/#groupallnonmajor
     "customManagers:dockerfileVersions",     // https://docs.renovatebot.com/presets-customManagers/#custommanagersdockerfileversions
     "customManagers:githubActionsVersions",  // https://docs.renovatebot.com/presets-customManagers/#custommanagersgithubactionsversions
