@@ -66,7 +66,8 @@
       "matchPackageNames": [
         "/^unplugin-/",
         "@intlify/unplugin-vue-i18n"
-      ]
+      ],
+      "minimumReleaseAge": "3 days"
       // "schedule": ["before 4am on Monday"]
       // "automerge": true,
       // "automergeType": "branch"
