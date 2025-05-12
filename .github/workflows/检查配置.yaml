@@ -2,6 +2,7 @@ name: Check Renovate Configuration
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   check:
