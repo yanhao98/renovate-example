@@ -16,6 +16,7 @@
     ":prConcurrentLimitNone",                // 取消并发 PR 限制
     ":semanticCommitTypeAll(chore)"          // 统一使用 chore 作为 commit 类型
   ],
+  "ignoreTests": false,
   "vulnerabilityAlerts": { "enabled": true, "labels": ["security"], "automerge": false, "schedule": "at any time" },
   "platformAutomerge": true,      // https://docs.renovatebot.com/configuration-options/#platformautomerge
   "labels": [ "dependencies" ],
