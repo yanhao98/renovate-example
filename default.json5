@@ -82,6 +82,7 @@
       "matchPackageNames": [
         "mcr.microsoft.com/playwright", // CI 的 Playwright 镜像
         "/^@playwright\\//",   // 匹配所有 @playwright/ 开头的包，例如 @playwright/test
+        "playwright-core",     // 
         "playwright"           // 匹配核心包 playwright
       ],
       "minimumReleaseAge": "3 days" // 设置 Playwright 相关包的发布稳定期为 3 天
