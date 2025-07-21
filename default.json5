@@ -86,6 +86,19 @@
         "playwright"           // 匹配核心包 playwright
       ],
       "minimumReleaseAge": "3 days" // 设置 Playwright 相关包的发布稳定期为 3 天
+    },
+
+    {
+      "groupName": "Tauri packages",
+      "groupSlug": "tauri",
+      "description": "Group Tauri core and related packages",
+      "matchPackageNames": [
+        "tauri",
+        "tauri-build",
+        "/^@tauri-apps\\/", // 匹配所有 @tauri-apps/ 开头的包
+        "/^tauri-plugin-/" // 匹配所有 tauri-plugin- 开头的包
+      ],
+      "minimumReleaseAge": "3 days" // 设置 Tauri 相关包的发布稳定期为 3 天
     }
 
     // major 更新需要人工确认
