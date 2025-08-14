@@ -16,13 +16,16 @@
     ":prConcurrentLimitNone",                // 取消并发 PR 限制
     ":semanticCommitTypeAll(chore)"          // 统一使用 chore 作为 commit 类型
   ],
+  // Should update internal deps in a monorepo
+  "updateInternalDeps": true,
+
   "ignoreTests": false,
   "vulnerabilityAlerts": { "enabled": true, "labels": ["security"], "automerge": false, "schedule": "at any time" },
   "platformAutomerge": false,      // https://docs.renovatebot.com/configuration-options/#platformautomerge
   "labels": [ "dependencies" ],
   "dependencyDashboard": false,
   "forkProcessing": "enabled",
-  "rangeStrategy": "bump",
+  "rangeStrategy": "auto",
   "internalChecksFilter": "none", // https://docs.renovatebot.com/configuration-options/#internalchecksfilter
   "packageRules": [
     { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] },
@@ -35,11 +38,12 @@
     // It's easier to deal with all the Vite plugins at once when Vite ships a new major version
     { "groupName": "vite packages", "extends": ["packages:vite"], "minimumReleaseAge": "3 days" },
 
-    { "groupName": "primevue pkgs", "matchPackageNames": ["/prime/"] },
-
+    
     // TypeScript doesn't follow semver, so we need to separate minor and patch updates
     // <https://www.semver-ts.org/1-background.html>
-    { "groupName": "typescript", "matchDepNames": ["typescript"], "separateMinorPatch": true, "separateMultipleMinor": true },
+    { "groupName": "typescript", "matchDepNames": ["typescript"], "separateMinorPatch": true, "separateMultipleMinor": true, "rangeStrategy": "tilde" },
+
+    { "groupName": "primevue pkgs", "matchPackageNames": ["/prime/"] },
 
     // Prettier, when used as a devDependency to format code, should be pinned.
     // SemVer only applies to its API, not its formatting behavior.
