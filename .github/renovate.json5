@@ -6,6 +6,7 @@
     // ":automergeMinor",
     ":disableDependencyDashboard" // https://docs.renovatebot.com/presets-default/#disabledependencydashboard
   ],
+  // "postUpdateOptions": ["pnpmDedupe"],
   "ignoreDeps": [],
   "ignorePaths": []
 }
