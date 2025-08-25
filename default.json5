@@ -21,12 +21,12 @@
 
   "ignoreTests": false,
   "vulnerabilityAlerts": { "enabled": true, "labels": ["security"], "automerge": false, "schedule": "at any time" },
+  // "internalChecksFilter": "none", // https://docs.renovatebot.com/configuration-options/#internalchecksfilter
   // "platformAutomerge": false,      // https://docs.renovatebot.com/configuration-options/#platformautomerge
   "labels": [ "dependencies" ],
   "dependencyDashboard": false,
   "forkProcessing": "enabled",
   "rangeStrategy": "auto",
-  "internalChecksFilter": "none", // https://docs.renovatebot.com/configuration-options/#internalchecksfilter
   "packageRules": [
     { "minimumReleaseAge": "14 days", "matchPackageNames": [ "*" ] },
 
