@@ -10,7 +10,7 @@ importers:
     devDependencies:
       renovate:
         specifier: ^41.0.0
-        version: 41.91.1(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.91.2(encoding@0.1.13)(typanion@3.14.0)
       vue-memoize-dict:
         specifier: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6
         version: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6(@vueuse/core@11.1.0(vue@3.5.12))(vue@3.5.12)
@@ -858,8 +858,8 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/node@24.3.3':
-    resolution: {integrity: sha512-GKBNHjoNw3Kra1Qg5UXttsY5kiWMEfoHq2TmXb+b1rcm6N7B3wTrFYIf/oSZ1xNQ+hVVijgLkiDZh7jRRsh+Gw==}
+  '@types/node@24.4.0':
+    resolution: {integrity: sha512-gUuVEAK4/u6F9wRLznPUU4WGUacSEBDPoC2TrBkw3GAnOLHBL45QdfHOXp1kJ4ypBGLxTOB+t7NJLpKoC3gznQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2569,8 +2569,8 @@ packages:
   remark@15.0.1:
     resolution: {integrity: sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==}
 
-  renovate@41.91.1:
-    resolution: {integrity: sha512-EGaRZkiP48l4he2HZSmiDHJYOZMeva/jj1+WUJpLBcCrogY1vHdVsx/2g4EP2jl0M5LA/urxkXebPvPJS+DXvw==}
+  renovate@41.91.2:
+    resolution: {integrity: sha512-R9P+mQEgX+xyjb8qNgwoYIoMBXONA25/mF2a3d/OVoIXqcAmhA7wstL7UVWIgI4HKMoExWDGHIYhp/NjlplHGA==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -2929,8 +2929,8 @@ packages:
   underscore@1.13.7:
     resolution: {integrity: sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g==}
 
-  undici-types@7.10.0:
-    resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
+  undici-types@7.11.0:
+    resolution: {integrity: sha512-kt1ZriHTi7MU+Z/r9DOdAI3ONdaR3M3csEaRc6ewa4f4dTvX4cQCbJ4NkEn0ohE4hHtq85+PhPSTY+pO/1PwgA==}
 
   unicorn-magic@0.1.0:
     resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
@@ -4711,13 +4711,13 @@ snapshots:
 
   '@types/bunyan@1.8.11':
     dependencies:
-      '@types/node': 24.3.3
+      '@types/node': 24.4.0
 
   '@types/cacheable-request@6.0.3':
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 24.3.3
+      '@types/node': 24.4.0
       '@types/responselike': 1.0.3
 
   '@types/debug@4.1.12':
@@ -4730,7 +4730,7 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 24.3.3
+      '@types/node': 24.4.0
 
   '@types/mdast@4.0.4':
     dependencies:
@@ -4742,9 +4742,9 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@24.3.3':
+  '@types/node@24.4.0':
     dependencies:
-      undici-types: 7.10.0
+      undici-types: 7.11.0
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -4754,7 +4754,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 24.3.3
+      '@types/node': 24.4.0
 
   '@types/semver@7.7.1': {}
 
@@ -4768,7 +4768,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 24.3.3
+      '@types/node': 24.4.0
     optional: true
 
   '@vue/compiler-core@3.5.12':
@@ -6675,7 +6675,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 24.3.3
+      '@types/node': 24.4.0
       long: 5.3.2
 
   protocols@2.0.2: {}
@@ -6810,7 +6810,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  renovate@41.91.1(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.91.2(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.858.0
       '@aws-sdk/client-ec2': 3.858.0
@@ -7325,7 +7325,7 @@ snapshots:
 
   underscore@1.13.7: {}
 
-  undici-types@7.10.0: {}
+  undici-types@7.11.0: {}
 
   unicorn-magic@0.1.0: {}
 
