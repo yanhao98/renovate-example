@@ -10,7 +10,7 @@ importers:
     devDependencies:
       renovate:
         specifier: ^41.0.0
-        version: 41.97.10(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.98.1(encoding@0.1.13)(typanion@3.14.0)
       vue-memoize-dict:
         specifier: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6
         version: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6(@vueuse/core@11.1.0(vue@3.5.12))(vue@3.5.12)
@@ -1525,8 +1525,8 @@ packages:
     resolution: {integrity: sha512-LDODD4TMYx7XXdpwxAVRAIAuB0bzv0s+ywFonY46k126qzQHT9ygyoa9tncmOiQmmDrik65UYsEkv3lbfqQ3yQ==}
     engines: {node: '>=14'}
 
-  gaxios@7.1.1:
-    resolution: {integrity: sha512-Odju3uBUJyVCkW64nLD4wKLhbh93bh6vIg/ZIXkWiLPBrdgtc65+tls/qml+un3pr6JqYVFDZbbmLDQT68rTOQ==}
+  gaxios@7.1.2:
+    resolution: {integrity: sha512-/Szrn8nr+2TsQT1Gp8iIe/BEytJmbyfrbFh419DfGQSkEgNEhbPi7JRJuughjkTzPWgU9gBQf5AVu3DbHt0OXA==}
     engines: {node: '>=18'}
 
   gcp-metadata@6.1.1:
@@ -2564,8 +2564,8 @@ packages:
   remark@15.0.1:
     resolution: {integrity: sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==}
 
-  renovate@41.97.10:
-    resolution: {integrity: sha512-tnSQuZL87dC3TPtlrgt/wZeIt0j4l0tlKagRN+OJUw6C5YNxyGI9+38w18eL6jsohsFan71j3fBPLaQsgdHDKw==}
+  renovate@41.98.1:
+    resolution: {integrity: sha512-Y6BPDh/I7MUu6lIbSqoQ6KxJrQ5BSiCFnbNXM6Wx78pY4uGoR14tl7WSbyxHHYq4B2d5IFFslzT6vlcOnel67g==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -5465,7 +5465,7 @@ snapshots:
       - encoding
       - supports-color
 
-  gaxios@7.1.1:
+  gaxios@7.1.2:
     dependencies:
       extend: 3.0.2
       https-proxy-agent: 7.0.6
@@ -5484,7 +5484,7 @@ snapshots:
 
   gcp-metadata@7.0.1:
     dependencies:
-      gaxios: 7.1.1
+      gaxios: 7.1.2
       google-logging-utils: 1.1.1
       json-bigint: 1.0.0
     transitivePeerDependencies:
@@ -5593,7 +5593,7 @@ snapshots:
     dependencies:
       base64-js: 1.5.1
       ecdsa-sig-formatter: 1.0.11
-      gaxios: 7.1.1
+      gaxios: 7.1.2
       gcp-metadata: 7.0.1
       google-logging-utils: 1.1.1
       gtoken: 8.0.0
@@ -5629,7 +5629,7 @@ snapshots:
 
   gtoken@8.0.0:
     dependencies:
-      gaxios: 7.1.1
+      gaxios: 7.1.2
       jws: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -6802,7 +6802,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  renovate@41.97.10(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.98.1(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.879.0
       '@aws-sdk/client-ec2': 3.879.0
