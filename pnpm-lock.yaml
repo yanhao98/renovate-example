@@ -10,7 +10,7 @@ importers:
     devDependencies:
       renovate:
         specifier: ^41.0.0
-        version: 41.97.7(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.97.9(encoding@0.1.13)(typanion@3.14.0)
       vue-memoize-dict:
         specifier: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6
         version: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6(@vueuse/core@11.1.0(vue@3.5.12))(vue@3.5.12)
@@ -195,8 +195,8 @@ packages:
     resolution: {integrity: sha512-v//b9jFnhzTKKV3HFTw2MakdM22uBAs2lBov51BWmFXuFtSTdBLrR7zgfetQPE3PVkFai0cmtJQPdc3MX+T/cQ==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/util-locate-window@3.873.0':
-    resolution: {integrity: sha512-xcVhZF6svjM5Rj89T1WzkjQmrTF6dpR2UvIHPMTnSZoNe6CixejPZ6f0JJ2kAhO8H+dUHwNBlsUgOTIKiK/Syg==}
+  '@aws-sdk/util-locate-window@3.893.0':
+    resolution: {integrity: sha512-T89pFfgat6c8nMmpI8eKjBcDcgJq36+m9oiXbcUzeU55MP9ZuGgBomGjGnHaEyF36jenW9gmg3NfZDm0AO2XPg==}
     engines: {node: '>=18.0.0'}
 
   '@aws-sdk/util-user-agent-browser@3.873.0':
@@ -2569,8 +2569,8 @@ packages:
   remark@15.0.1:
     resolution: {integrity: sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==}
 
-  renovate@41.97.7:
-    resolution: {integrity: sha512-ViB5AIZLsI6m4vaKnYLTQ/+jhn0OTob4HaiBxSURYk55NOMpIOE0xhLTVG6gn0kSVURpF76ztioBhcBpix3y9w==}
+  renovate@41.97.9:
+    resolution: {integrity: sha512-nSGp45c9FHLGSFaA8Y1LNPJZXKEAEFfzdQRWC8Z8aya3ABjWKki/6/zddmFBifVxYwdViY6PYWafGOZD2gBHdg==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -3140,7 +3140,7 @@ snapshots:
       '@aws-crypto/supports-web-crypto': 5.2.0
       '@aws-crypto/util': 5.2.0
       '@aws-sdk/types': 3.862.0
-      '@aws-sdk/util-locate-window': 3.873.0
+      '@aws-sdk/util-locate-window': 3.893.0
       '@smithy/util-utf8': 2.3.0
       tslib: 2.8.1
 
@@ -3150,7 +3150,7 @@ snapshots:
       '@aws-crypto/supports-web-crypto': 5.2.0
       '@aws-crypto/util': 5.2.0
       '@aws-sdk/types': 3.862.0
-      '@aws-sdk/util-locate-window': 3.873.0
+      '@aws-sdk/util-locate-window': 3.893.0
       '@smithy/util-utf8': 2.3.0
       tslib: 2.8.1
 
@@ -3903,7 +3903,7 @@ snapshots:
       '@smithy/types': 4.5.0
       tslib: 2.8.1
 
-  '@aws-sdk/util-locate-window@3.873.0':
+  '@aws-sdk/util-locate-window@3.893.0':
     dependencies:
       tslib: 2.8.1
 
@@ -6810,7 +6810,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  renovate@41.97.7(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.97.9(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.879.0
       '@aws-sdk/client-ec2': 3.879.0
