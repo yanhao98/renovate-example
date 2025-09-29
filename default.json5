@@ -108,7 +108,7 @@
     // major 更新需要人工确认
     // { "matchUpdateTypes": ["major"], "dependencyDashboardApproval": true },
   ],
-  // "commitBody": "[skip ci]",  // 根据 CI 配置调整
+  "commitBody": "[skip ci]",  // 根据 CI 配置调整
   "customManagers": [
     // https://semantic-release.gitbook.io/semantic-release/usage/installation#notes
     /* === run: npx semantic-release@24.2.1 === */
