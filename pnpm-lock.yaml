@@ -10,7 +10,7 @@ importers:
     devDependencies:
       renovate:
         specifier: ^41.0.0
-        version: 41.131.6(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.131.8(encoding@0.1.13)(typanion@3.14.0)
       vue-memoize-dict:
         specifier: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6
         version: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6(@vueuse/core@11.1.0(vue@3.5.12))(vue@3.5.12)
@@ -1425,8 +1425,8 @@ packages:
     resolution: {integrity: sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==}
     engines: {node: '>=6'}
 
-  exponential-backoff@3.1.2:
-    resolution: {integrity: sha512-8QxYTVXUkuy7fIIoitQkPwGonB8F3Zj8eEO8Sqg9Zv/bkI7RJAzowee4gr81Hak/dUTpA2Z7VfQgoijjPNlUZA==}
+  exponential-backoff@3.1.3:
+    resolution: {integrity: sha512-ZgEeZXj30q+I0EN+CbSSpIyPaJ5HVQD18Z1m+u1FXbAeT94mr1zw50q4q6jiiC447Nl/YTcIYSAftiGqetwXCA==}
 
   extend@3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
@@ -2568,8 +2568,8 @@ packages:
   remark@15.0.1:
     resolution: {integrity: sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==}
 
-  renovate@41.131.6:
-    resolution: {integrity: sha512-51Z7ua02ubUqyU1KhCyeDlzJJ7VxrVTMf6SQK1U6k4oQSN/svtAsXgQU126Hutdd9HpoHEsO+S/mkbjlZurRug==}
+  renovate@41.131.8:
+    resolution: {integrity: sha512-pFArK+NdaHT+5BDeP8TyYMaDZt4tV8fm9T7AxR7WcE9vfx29bsvJ/Sm81/Dhg8KXrxJ+39wq8ajlJT2WGsha1w==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -5340,7 +5340,7 @@ snapshots:
   expand-template@2.0.3:
     optional: true
 
-  exponential-backoff@3.1.2:
+  exponential-backoff@3.1.3:
     optional: true
 
   extend@3.0.2: {}
@@ -6463,7 +6463,7 @@ snapshots:
   node-gyp@11.4.2:
     dependencies:
       env-paths: 2.2.1
-      exponential-backoff: 3.1.2
+      exponential-backoff: 3.1.3
       graceful-fs: 4.2.11
       make-fetch-happen: 14.0.3
       nopt: 8.1.0
@@ -6804,7 +6804,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  renovate@41.131.6(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.131.8(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.879.0
       '@aws-sdk/client-ec2': 3.879.0
