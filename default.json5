@@ -54,7 +54,7 @@
     
     { "groupName": "github-actions", "matchManagers": [ "github-actions" ] },
     { "groupName": "Dockerfile", "matchManagers": [ "dockerfile" ] },
-    { "groupName": "types", "matchPackageNames": [ "/^@types//" ],  "minimumReleaseAge": "1 days" },
+    { "groupName": "types", "matchPackageNames": [ "/^@types//" ],  "minimumReleaseAge": "0 days" },
 
     // https://grok.com/chat/68971467-db9f-4e92-b69f-e81431250d3b
     {
