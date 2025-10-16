@@ -103,7 +103,9 @@
         "/^tauri-plugin-/"   // 匹配所有 tauri-plugin- 开头的包
       ],
       "minimumReleaseAge": "3 days" // 设置 Tauri 相关包的发布稳定期为 3 天
-    }
+    },
+
+    { "groupName": "wrangler", "description": "Group all wrangler-related dependencies", "matchPackageNames": [ "wrangler" ], "minimumReleaseAge": "3 days" }
 
     // major 更新需要人工确认
     // { "matchUpdateTypes": ["major"], "dependencyDashboardApproval": true },
