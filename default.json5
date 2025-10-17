@@ -69,10 +69,7 @@
     {
       "groupName": "unplugin packages",
       "description": "Group all unplugin-related dependencies",
-      "matchPackageNames": [
-        "/^unplugin-/",
-        "@intlify/unplugin-vue-i18n"
-      ],
+      "matchPackageNames": [ "/^unplugin-/", "@intlify/unplugin-vue-i18n" ],
       "minimumReleaseAge": "3 days"
       // "schedule": ["before 4am on Monday"]
       // "automerge": true,
@@ -105,7 +102,9 @@
       "minimumReleaseAge": "3 days" // 设置 Tauri 相关包的发布稳定期为 3 天
     },
 
-    { "groupName": "wrangler", "description": "Group all wrangler-related dependencies", "matchPackageNames": [ "wrangler" ], "minimumReleaseAge": "3 days" }
+    { "groupName": "cloudflare", "description": "Cloudflare 的相关依赖", "minimumReleaseAge": "3 days",
+      "matchPackageNames": [ "wrangler", "/^@cloudflare\\/" ] 
+    }
 
     // major 更新需要人工确认
     // { "matchUpdateTypes": ["major"], "dependencyDashboardApproval": true },
