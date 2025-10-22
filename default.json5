@@ -65,6 +65,8 @@
       // "automerge": true
     },
 
+    { "groupName": "PNPM", "groupSlug": "pnpm", "matchPackageNames": [ "pnpm" ], "minimumReleaseAge": "3 days" },
+
     // https://grok.com/chat/d407656c-c0b6-445a-be83-a13c7c39ccba
     {
       "groupName": "unplugin packages",
