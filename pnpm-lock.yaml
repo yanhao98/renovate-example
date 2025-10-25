@@ -10,7 +10,7 @@ importers:
     devDependencies:
       renovate:
         specifier: ^41.0.0
-        version: 41.145.3(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.146.0(encoding@0.1.13)(typanion@3.14.0)
       vue-memoize-dict:
         specifier: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6
         version: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6(@vueuse/core@11.1.0(vue@3.5.12))(vue@3.5.12)
@@ -2575,8 +2575,8 @@ packages:
   remark@15.0.1:
     resolution: {integrity: sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==}
 
-  renovate@41.145.3:
-    resolution: {integrity: sha512-8QuLpJVPliG3r3+MMACSuR85qmg91Vr4WK5NJnvbZI9zPNYo4/y8DWViFrXk+ZP7q/ves1/2SrclOgzxPvK3YA==}
+  renovate@41.146.0:
+    resolution: {integrity: sha512-Hid6tENtAOozq4DCXZNXnJFQ5mIhe/4Q5+92hbPwK6WZfii3ezwKrnEbzpVlUYlqf701sYOJymV4Y1MXia4XCw==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -6813,7 +6813,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  renovate@41.145.3(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.146.0(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.899.0
       '@aws-sdk/client-ec2': 3.899.0
