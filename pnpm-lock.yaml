@@ -10,7 +10,7 @@ importers:
     devDependencies:
       renovate:
         specifier: ^41.0.0
-        version: 41.163.1(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.163.5(encoding@0.1.13)(typanion@3.14.0)
       vue-memoize-dict:
         specifier: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6
         version: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6(@vueuse/core@11.1.0(vue@3.5.12))(vue@3.5.12)
@@ -554,9 +554,9 @@ packages:
   '@renovatebot/detect-tools@1.2.4':
     resolution: {integrity: sha512-qKkRWDmwfgPN5vrD6QzMa6UNqb06VXaZL1hxxLFsOauiSTAxz/TVKPhb/hFyf27yu35JyXIN40PiNQR+bidKbQ==}
 
-  '@renovatebot/kbpgp@4.0.3':
-    resolution: {integrity: sha512-RMj9zekThsU/rCZxY0DeXl4hXU0rJOJm9wrFfLoFJnNsLQO1v2nfkK7sdYiMe/9+i99W/JWCtGDfySxIhC8CmA==}
-    engines: {node: ^20.9.0 || ^22.11.0, pnpm: ^10.0.0}
+  '@renovatebot/kbpgp@4.0.4':
+    resolution: {integrity: sha512-jHC+jEbW/IMgppTfltGvheNv2WDPlYR/Jm+vcfRsCAO0JEfMAyh/aPYQ6ttRiB5GJlstxZiJpxGcMSS/7uDb1A==}
+    engines: {node: ^20.9.0 || ^22.11.0 || >=24.10.0, pnpm: ^10.0.0}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@renovatebot/osv-offline-db@1.7.9':
@@ -2572,9 +2572,9 @@ packages:
   remark@15.0.1:
     resolution: {integrity: sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==}
 
-  renovate@41.163.1:
-    resolution: {integrity: sha512-8SzTHH0vePm632FJrrvxPalFFcBqCjNg4EvtPpgGVoPzV7Do7dfYdVspT6rYjpyL8+nLSb9yKBm4fszJs6yopw==}
-    engines: {node: ^22.13.0, pnpm: ^10.0.0}
+  renovate@41.163.5:
+    resolution: {integrity: sha512-pJtKLhDvRSwtwA9eRgLHbUQ2iQrjPyrQ6ww/x5Y93U/SMYNTnE4xBM0OM92NS2qNRSf7t2q0atNwfWWthNyH3A==}
+    engines: {node: ^22.13.0 || ^24.10.0, pnpm: ^10.0.0}
     hasBin: true
 
   require-in-the-middle@8.0.1:
@@ -3111,8 +3111,8 @@ packages:
   yauzl@2.10.0:
     resolution: {integrity: sha512-p4a9I6X6nu6IhoGmBqAcbJy1mlC4j27vEPZX9F4L4/vZT3Lyq1VkFHw/V/PUcB9Buo+DG3iHkT0x3Qya58zc3g==}
 
-  yocto-queue@1.2.1:
-    resolution: {integrity: sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg==}
+  yocto-queue@1.2.2:
+    resolution: {integrity: sha512-4LCcse/U2MHZ63HAJVE+v71o7yOdIe4cZ70Wpf8D/IyjDKYQLV5GD46B+hSTjJsvV5PztjvHoU580EftxjDZFQ==}
     engines: {node: '>=12.20'}
 
   zod@3.25.76:
@@ -4285,7 +4285,7 @@ snapshots:
       upath: 2.0.1
       zod: 3.25.76
 
-  '@renovatebot/kbpgp@4.0.3':
+  '@renovatebot/kbpgp@4.0.4':
     dependencies:
       bn: 1.0.5
       bzip-deflate: 1.0.0
@@ -6532,7 +6532,7 @@ snapshots:
 
   p-limit@4.0.0:
     dependencies:
-      yocto-queue: 1.2.1
+      yocto-queue: 1.2.2
 
   p-locate@4.1.0:
     dependencies:
@@ -6801,7 +6801,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  renovate@41.163.1(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.163.5(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.899.0
       '@aws-sdk/client-ec2': 3.899.0
@@ -6830,7 +6830,7 @@ snapshots:
       '@pnpm/parse-overrides': 1001.0.3
       '@qnighy/marshal': 0.1.3
       '@renovatebot/detect-tools': 1.2.4
-      '@renovatebot/kbpgp': 4.0.3
+      '@renovatebot/kbpgp': 4.0.4
       '@renovatebot/osv-offline': 1.7.9
       '@renovatebot/pep440': 4.2.1
       '@renovatebot/ruby-semver': 4.1.2
@@ -7501,7 +7501,7 @@ snapshots:
       buffer-crc32: 0.2.13
       fd-slicer: 1.1.0
 
-  yocto-queue@1.2.1: {}
+  yocto-queue@1.2.2: {}
 
   zod@3.25.76: {}
 
