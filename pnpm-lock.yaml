@@ -10,7 +10,7 @@ importers:
     devDependencies:
       renovate:
         specifier: ^41.0.0
-        version: 41.168.5(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.169.1(encoding@0.1.13)(typanion@3.14.0)
       vue-memoize-dict:
         specifier: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6
         version: https://pkg.pr.new/yanhao98/vue-memoize-dict@77d83e6(@vueuse/core@11.1.0(vue@3.5.12))(vue@3.5.12)
@@ -1222,8 +1222,8 @@ packages:
     resolution: {integrity: sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==}
     engines: {node: '>= 6'}
 
-  csstype@3.2.1:
-    resolution: {integrity: sha512-98XGutrXoh75MlgLihlNxAGbUuFQc7l1cqcnEZlLNKc0UrVdPndgmaDmYTDDh929VS/eqTZV0rozmhu2qqT1/g==}
+  csstype@3.2.2:
+    resolution: {integrity: sha512-D80T+tiqkd/8B0xNlbstWDG4x6aqVfO52+OlSUNIdkTvmNw0uQpJLeos2J/2XvpyidAFuTPmpad+tUxLndwj6g==}
 
   dargs@7.0.0:
     resolution: {integrity: sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==}
@@ -2566,8 +2566,8 @@ packages:
   remark@15.0.1:
     resolution: {integrity: sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==}
 
-  renovate@41.168.5:
-    resolution: {integrity: sha512-2apO4iDQZiesjjwnzeYKvgp7X8taN4CIGigOE/78Or+bxfIcsJfgumtRBhg3F+Ivhxn5/x+qicWLSY0vr4i7Nw==}
+  renovate@41.169.1:
+    resolution: {integrity: sha512-+JuDnANPJw+Ipy4MYloR+rHxJYIwlANvGPoyWMi6GQb+QnOOOoIPhtYzfdaEMBnY4X4Poq8AXSA3Zqb1yfBIeA==}
     engines: {node: ^22.13.0 || ^24.10.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -4799,7 +4799,7 @@ snapshots:
       '@vue/reactivity': 3.5.12
       '@vue/runtime-core': 3.5.12
       '@vue/shared': 3.5.12
-      csstype: 3.2.1
+      csstype: 3.2.2
 
   '@vue/server-renderer@3.5.12(vue@3.5.12)':
     dependencies:
@@ -5162,7 +5162,7 @@ snapshots:
 
   css-what@6.2.2: {}
 
-  csstype@3.2.1: {}
+  csstype@3.2.2: {}
 
   dargs@7.0.0: {}
 
@@ -6789,7 +6789,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  renovate@41.168.5(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.169.1(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.922.0
       '@aws-sdk/client-ec2': 3.922.0
