@@ -10,6 +10,7 @@
     "customManagers:dockerfileVersions",     // https://docs.renovatebot.com/presets-customManagers/#custommanagersdockerfileversions
     "customManagers:githubActionsVersions",  // https://docs.renovatebot.com/presets-customManagers/#custommanagersgithubactionsversions
     "helpers:disableTypesNodeMajor",         // https://docs.renovatebot.com/presets-helpers/#helpersdisabletypesnodemajor
+    "monorepo:playwright"                    // https://docs.renovatebot.com/presets-group/#groupplaywrightmonorepo
 
     ":widenPeerDependencies",                // https://docs.renovatebot.com/presets-default/#widenpeerdependencies
     ":disablePeerDependencies",              // https://docs.renovatebot.com/presets-default/#disablepeerdependencies
