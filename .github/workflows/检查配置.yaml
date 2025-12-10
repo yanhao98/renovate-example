@@ -12,15 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npx --yes --package renovate renovate-config-validator
+      - run: npx --yes --package renovate@latest renovate-config-validator
         if: always()
-      - run: npx --yes --package renovate renovate-config-validator ./default.json5
+      - run: npx --yes --package renovate@latest renovate-config-validator ./default.json5
         if: always()
-      - run: npx --yes --package renovate -- renovate-config-validator ./default.json5 --strict
+      - run: npx --yes --package renovate@latest -- renovate-config-validator ./default.json5 --strict
         if: always()
-      - run: npx renovate --platform=local
+      - run: npx --package renovate@latest renovate --platform=local
         if: always()
-      - run: npx renovate --platform=local --dry-run=full
+      - run: npx --package renovate@latest renovate --platform=local --dry-run=full
         if: always()
         env:
           LOG_LEVEL: debug
