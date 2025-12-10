@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
       - run: npx --yes --package renovate@latest renovate-config-validator
         if: always()
       - run: npx --yes --package renovate@latest renovate-config-validator ./default.json5
