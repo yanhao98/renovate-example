@@ -1,3 +1,5 @@
+// bun --bun test-regex/run.mjs
+
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
 import fs from "node:fs";
@@ -23,6 +25,3 @@ const filecontent = fs.readFileSync(path.join(__dirname, "file.txt"), "utf8");
   const regex = "^\\.github/workflows/[^/]+\\.ya?ml$";
   extractMatchResult(regex, ".github/workflows/中 | 文 : 文件名.yaml");
 })();
-
-
-// TODO: run.mjs regex file
