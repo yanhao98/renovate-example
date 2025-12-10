@@ -11,6 +11,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: npx --yes --package renovate renovate-config-validator
         if: always()
       - run: npx --yes --package renovate renovate-config-validator ./default.json5
