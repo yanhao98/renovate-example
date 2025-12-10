@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v6
         with:
-          node-version: ''
+          node-version: 'node'
       - run: npx --yes --package renovate@latest renovate-config-validator
         if: always()
       - run: npx --yes --package renovate@latest renovate-config-validator ./default.json5
