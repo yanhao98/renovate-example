@@ -3,19 +3,23 @@ name: Check Renovate Configuration
 on:
   push:
   workflow_dispatch:
+  schedule:
+    # Runs once weekly at 00:00 UTC on Sunday. GitHub schedule uses UTC time.
+    - cron: '0 0 * * 0'
 
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: yanhao98/composite-actions/setup-node-environment@main
-      - run: pnpm renovate-config-validator
+      - run: npx --yes --package renovate renovate-config-validator
         if: always()
-      - run: pnpm run validator
+      - run: npx --yes --package renovate renovate-config-validator ./default.json5
         if: always()
-      - run: pnpm run validator:strict
+      - run: npx --yes --package renovate -- renovate-config-validator ./default.json5 --strict
         if: always()
       - run: npx renovate --platform=local
         if: always()
-      - run: pnpm run dry-run:npx
+      - run: npx renovate --platform=local --dry-run=full
         if: always()
+        env:
+          LOG_LEVEL: debug
