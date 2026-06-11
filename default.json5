@@ -109,7 +109,7 @@
     },
 
     { "groupName": "cloudflare", "description": "Cloudflare 的相关依赖", "minimumReleaseAge": "3 days",
-      "matchPackageNames": [ "wrangler", "/^@cloudflare\\/" ] 
+      "matchPackageNames": [ "wrangler", "/^@cloudflare\\//" ] 
     }
 
     // major 更新需要人工确认
